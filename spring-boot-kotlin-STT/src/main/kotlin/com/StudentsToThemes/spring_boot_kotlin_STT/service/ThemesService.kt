@@ -679,6 +679,118 @@ class ThemesService(
     }
 
     /**
+     * Apply ML sorting to a specialization in a theme.
+     * @param themeId the id of the theme to apply ML sorting to
+     * @param specializationName the name of the specialization to apply ML sorting to
+     * @return the updated theme
+     */
+    fun applyMLSortingToSpecialization(themeId: UUID, specializationName: String): ThemeResponseDto {
+        log.info("ML sorting specialization: {} in theme: {}", specializationName, themeId)
+
+        // 1. Getting a theme
+        val theme = themesRepository.findById(themeId)
+            .orElseThrow { ThemeNotFoundException(themeId) }
+
+        // 2. A simple check for the existence of a specialization
+        require(theme.specializations.any { it.equals(specializationName, ignoreCase = true) }) {
+            "Specialization '$specializationName' not found in theme"
+        }
+
+        // 3. Using ML sorting
+        val sortedSuccessfully = hasStudentsAndApplyMLSorting(themeId, specializationName)
+
+        // 4. Update the status if successful
+        if (sortedSuccessfully) {
+            updateMlSortedSpecializationsInDb(themeId, setOf(specializationName))
+        }
+
+        // 5. Clearing the cache and returning the result
+        entityManager.clear()
+        return themesRepository.findById(themeId)
+            .orElseThrow { ThemeNotFoundException(themeId) }
+            .toResponseDto()
+    }
+
+    /**
+     * Get the students in a specialization of a theme with optional active filter
+     * @param themeId the id of the theme to get the students from
+     * @param specializationName the name of the specialization to get the students from
+     * @param limit the maximum number of students to return
+     * @param useMLSorting whether to use ML sorting
+     * @param onlyActive whether to show only active students
+     * @return a list of students in the specialization
+     */
+    fun getSpecializationStudents(
+        themeId: UUID,
+        specializationName: String,
+        limit: Int? = null,
+        useMLSorting: Boolean = false,
+        onlyActive: Boolean = false
+    ): List<StudentWithPriorityDto> {
+        log.debug("Getting students for specialization {} in theme {} with limit: {}, ML: {}, onlyActive: {}",
+            specializationName, themeId, limit, useMLSorting, onlyActive)
+
+        val theme = themesRepository.findById(themeId)
+            .orElseThrow { ThemeNotFoundException(themeId) }
+
+        require(theme.specializations.contains(specializationName)) {
+            "Specialization $specializationName not found in theme"
+        }
+
+        var specializationStudents = themeSpecializationStudentRepository
+            .findByThemeIdAndSpecializationName(themeId, specializationName)
+            .sortedBy { it.priorityOrder }
+
+        // Filter by active if requested
+        if (onlyActive) {
+            specializationStudents = specializationStudents.filter { it.student.active }
+        }
+
+        var studentsWithPriority: List<StudentWithPriorityDto>
+
+        // Apply ML sorting if requested and service is available
+        if (useMLSorting && mlSortingService.isServiceAvailable()) {
+            val students = specializationStudents.map { it.student }
+
+            val mlSortedStudents = mlSortingService.sortSpecializationStudents(
+                students = students,
+                theme = theme,
+                targetSpecialization = specializationName
+            )
+
+            // Create DTO from ML-sorted students
+            studentsWithPriority = mlSortedStudents.mapIndexed { index, student ->
+                StudentWithPriorityDto(
+                    studentId = student.id!!,
+                    studentName = student.name,
+                    priority = index,
+                    hardSkill = student.hardSkill,
+                    background = student.background,
+                    active = student.active
+                )
+            }
+        } else {
+            // Use the order from the database
+            studentsWithPriority = specializationStudents.map { entity ->
+                StudentWithPriorityDto(
+                    studentId = entity.student.id!!,
+                    studentName = entity.student.name,
+                    priority = entity.priorityOrder,
+                    hardSkill = entity.student.hardSkill,
+                    background = entity.student.background,
+                    active = entity.student.active
+                )
+            }
+        }
+
+        return if (limit != null) {
+            studentsWithPriority.take(limit)
+        } else {
+            studentsWithPriority
+        }
+    }
+
+    /**
      * Copy students from theme to all specializations
      * @param themeId the id of the theme to copy the students from
      * @return the updated theme
@@ -770,6 +882,150 @@ class ThemesService(
         return themesRepository.findById(themeId)
             .orElseThrow { ThemeNotFoundException(themeId) }
             .toResponseDto()
+    }
+
+    /**
+     * Apply ML sorting to all specializations in a theme
+     * @param themeId the id of theme
+     * @return Updated sorted theme
+     */
+    fun applyMLSortingToTheme(themeId: UUID): ThemeResponseDto {
+        log.info("ML sorting all specializations in theme: {}", themeId)
+
+        // 1. Get the topic and copy the list of specializations
+        val theme = themesRepository.findById(themeId)
+            .orElseThrow { ThemeNotFoundException(themeId) }
+
+        // 2. Copy the list for safe iteration
+        val specializations = theme.specializations.toList()
+        val successfullySorted = mutableSetOf<String>()
+
+        // 3. Process each specialization
+        specializations.forEach { specialization ->
+            try {
+                if (hasStudentsAndApplyMLSorting(themeId, specialization)) {
+                    successfullySorted.add(specialization)
+                    log.info("Successfully ML sorted specialization: {}", specialization)
+                }
+            } catch (e: Exception) {
+                log.warn("Failed to ML sort specialization {}: {}", specialization, e.message)
+            }
+        }
+
+        // 4. Update the status of ML-sorted specializations
+        if (successfullySorted.isNotEmpty()) {
+            updateMlSortedSpecializationsInDb(themeId, successfullySorted)
+        }
+
+        // 5. Clear the cache and return the updated theme
+        entityManager.clear()
+        return themesRepository.findById(themeId)
+            .orElseThrow { ThemeNotFoundException(themeId) }
+            .toResponseDto()
+    }
+
+    /**
+     * Internal method: checks if a specialization has students and applies ML sorting.
+     * This method validates that there are enough students for meaningful sorting,
+     * applies machine learning algorithms to rank them based on their suitability
+     * for the specialization, and updates the priority order in the database.
+     *
+     * @param themeId The unique identifier of the theme containing the specialization
+     * @param specialization The name of the specialization to sort students for
+     * @return Boolean indicating success of the ML sorting operation:
+     *         - true: ML sorting was successfully applied and priorities updated
+     *         - false: Either insufficient students (< 2) or ML service error occurred
+     *
+     * @throws ThemeNotFoundException if the theme with given ID doesn't exist
+     * @throws Exception if ML service encounters an error during sorting
+     *
+     * Process:
+     * 1. Retrieves all students in the specialization ordered by current priority
+     * 2. Validates minimum student count (2) for meaningful sorting
+     * 3. Calls ML service to sort students based on their compatibility
+     * 4. Updates priority orders based on ML recommendations
+     * 5. Persists changes to the database
+     *
+     * Side Effects:
+     * - Modifies priorityOrder in ThemeSpecializationStudent entities
+     * - Updates database records through themeSpecializationStudentRepository
+     */
+    private fun hasStudentsAndApplyMLSorting(themeId: UUID, specialization: String): Boolean {
+        // 1. We get students specializing in
+        val specializationStudents = themeSpecializationStudentRepository
+            .findByThemeIdAndSpecializationName(themeId, specialization)
+            .sortedBy { it.priorityOrder }
+
+        // 2. We check whether there are enough students for sorting
+        if (specializationStudents.size < 2) {
+            log.debug("Not enough students ({}) for ML sorting in {}", specializationStudents.size, specialization)
+            return false
+        }
+
+        // 3. Getting a theme for the ML service
+        val theme = themesRepository.findById(themeId)
+            .orElseThrow { ThemeNotFoundException(themeId) }
+
+        // 4. Calling the ML service
+        val sortedStudents = try {
+            mlSortingService.sortSpecializationStudents(
+                students = specializationStudents.map { it.student },
+                theme = theme,
+                targetSpecialization = specialization
+            )
+        } catch (e: Exception) {
+            log.error("ML service error for {}: {}", specialization, e.message)
+            return false
+        }
+
+        // 5. Updating the order of students
+        sortedStudents.forEachIndexed { index, student ->
+            specializationStudents.find { it.student.id == student.id }?.priorityOrder = index
+        }
+
+        // 6. Saving the changes
+        themeSpecializationStudentRepository.saveAll(specializationStudents)
+        return true
+    }
+
+    /**
+     * Updates the mlSortedSpecializations tracking table using native SQL queries.
+     * This method maintains a record of which specializations have been processed
+     * by the machine learning sorting algorithm, enabling tracking and preventing
+     * redundant processing.
+     *
+     * @param themeId The unique identifier of the theme containing the specializations
+     * @param specializations Set of specialization names that have been ML sorted
+     *
+     * Process:
+     * 1. Clears existing ML sorting records for the given theme using native SQL DELETE
+     * 2. Inserts new records for each successfully sorted specialization using native SQL INSERT
+     * 3. Forces immediate database synchronization through entityManager.flush()
+     *
+     * Side Effects:
+     * - Modifies the mlSortedSpecializations table directly
+     * - Removes all previous ML sorting records for the theme
+     * - Creates new tracking records for specified specializations
+     *
+     * @throws RuntimeException if native SQL operations fail
+     *
+     * Note:
+     * - Uses native SQL for performance and direct table manipulation
+     * - Requires explicit flush to ensure changes are persisted immediately
+     * - Should be called after successful ML sorting operations
+     * - Maintains data integrity by clearing old records before inserting new ones
+     */
+
+    private fun updateMlSortedSpecializationsInDb(themeId: UUID, specializations: Set<String>) {
+        // First, we clear the old records
+        themesRepository.clearMlSortedSpecializations(themeId)
+
+        // Then we add new ones
+        specializations.forEach { spec ->
+            themesRepository.addMlSortedSpecialization(themeId, spec)
+        }
+
+        entityManager.flush() // Required for native queries
     }
 
     /**
