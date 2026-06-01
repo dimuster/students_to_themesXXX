@@ -94,17 +94,11 @@ echo "=== Check Complete ==="
 **Быстрая проверка системы:**
 ```bash
 # Однострочник для проверки всех компонентов
-curl -s http://localhost:8080/api/themes/ml-health && \
+curl -s http://localhost:8080/themes/ml-health && \
 curl -s http://localhost:8000/health && \
 echo "All systems operational"
 ```
 
-**Сброс тестовых данных:**
-```bash
-# Удаление всех данных (осторожно!)
-curl -X DELETE "http://localhost:8080/api/students/all"
-curl -X DELETE "http://localhost:8080/api/themes/all"
-```
 
 ### <a id="контакты-для-поддержки">Контакты для поддержки</a>
 

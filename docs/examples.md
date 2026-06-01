@@ -14,7 +14,7 @@
 
 ```bash
 # 1. Создаем студентов
-curl -X POST "http://localhost:8080/api/students" \
+curl -X POST "http://localhost:8080/students" \
   -H "Content-Type: application/json" \
   -d '{
     "name": "Алексей ML разработчик",
@@ -24,7 +24,7 @@ curl -X POST "http://localhost:8080/api/students" \
     "timeInWeek": "25 часов"
   }'
 
-curl -X POST "http://localhost:8080/api/students" \
+curl -X POST "http://localhost:8080/students" \
   -H "Content-Type: application/json" \
   -d '{
     "name": "Мария Data Scientist", 
@@ -35,7 +35,7 @@ curl -X POST "http://localhost:8080/api/students" \
   }'
 
 # 2. Создаем тему
-curl -X POST "http://localhost:8080/api/themes" \
+curl -X POST "http://localhost:8080/themes" \
   -H "Content-Type: application/json" \
   -d '{
     "name": "Разработка системы предсказания цен недвижимости",
@@ -46,25 +46,25 @@ curl -X POST "http://localhost:8080/api/themes" \
   }'
 
 # 3. Добавляем студентов к теме
-curl -X POST "http://localhost:8080/api/themes/THEME_ID/students" \
+curl -X POST "http://localhost:8080/themes/THEME_ID/students" \
   -H "Content-Type: application/json" \
   -d '["STUDENT_1_ID", "STUDENT_2_ID"]'
 
 # 4. Копируем студентов в специализации
-curl -X POST "http://localhost:8080/api/themes/THEME_ID/copy-to-specializations"
+curl -X POST "http://localhost:8080/themes/THEME_ID/copy-to-specializations"
 
 # 5. Применяем ML сортировку для Machine Learning специализации
-curl -X POST "http://localhost:8080/api/themes/THEME_ID/specializations/Machine%20Learning/ml-sort"
+curl -X POST "http://localhost:8080/themes/THEME_ID/specializations/Machine%20Learning/ml-sort"
 
 # 6. Проверяем результат
-curl "http://localhost:8080/api/themes/THEME_ID/specializations/Machine%20Learning/students?useMLSorting=true"
+curl "http://localhost:8080/themes/THEME_ID/specializations/Machine%20Learning/students?useMLSorting=true"
 ```
 
 ### <a id="сценарий-2-массовое-управление-студентами">Сценарий 2: Массовое управление студентами</a>
 
 ```bash
 # 1. Создаем несколько студентов
-curl -X POST "http://localhost:8080/api/students/by-ids" \
+curl -X POST "http://localhost:8080/students/by-ids" \
   -H "Content-Type: application/json" \
   -d '[
     {
@@ -84,7 +84,7 @@ curl -X POST "http://localhost:8080/api/students/by-ids" \
   ]'
 
 # 2. Деактивируем группу студентов
-curl -X PUT "http://localhost:8080/api/students/change-activities" \
+curl -X PUT "http://localhost:8080/students/change-activities" \
   -H "Content-Type: application/json" \
   -d '{
     "ids": ["STUDENT_1_ID", "STUDENT_2_ID"],
@@ -92,21 +92,21 @@ curl -X PUT "http://localhost:8080/api/students/change-activities" \
   }'
 
 # 3. Удаляем неактивных студентов
-curl -X DELETE "http://localhost:8080/api/students/unactive"
+curl -X DELETE "http://localhost:8080/students/unactive"
 ```
 
 ### <a id="сценарий-3-поиск-и-фильтрация">Сценарий 3: Поиск и фильтрация</a>
 
 ```bash
 # Поиск студентов по навыкам
-curl "http://localhost:8080/api/students?hardSkill=Machine%20Learning&background=Python"
+curl "http://localhost:8080/students?hardSkill=Machine%20Learning&background=Python"
 
 # Поиск тем по автору и описанию
-curl "http://localhost:8080/api/themes?author=Петров&description=анализ"
+curl "http://localhost:8080/themes?author=Петров&description=анализ"
 
 # Получение активных студентов с ограничением
-curl "http://localhost:8080/api/students/active"
+curl "http://localhost:8080/students/active"
 
 # Получение студентов специализации с ML сортировкой
-curl "http://localhost:8080/api/themes/THEME_ID/specializations/Data%20Science/students?useMLSorting=true&onlyActive=true"
+curl "http://localhost:8080/themes/THEME_ID/specializations/Data%20Science/students?useMLSorting=true&onlyActive=true"
 ```
