@@ -5,7 +5,7 @@ import com.StudentsToThemes.spring_boot_kotlin_STT.DTO.StudentWithPriorityDto
 import com.StudentsToThemes.spring_boot_kotlin_STT.DTO.ThemeResponseDto
 import com.StudentsToThemes.spring_boot_kotlin_STT.entity.ThemeEntity
 
-//Need to change
+
 fun ThemeEntity.toResponseDto() = ThemeResponseDto(
     id = this.id!!,
     name = this.name,
