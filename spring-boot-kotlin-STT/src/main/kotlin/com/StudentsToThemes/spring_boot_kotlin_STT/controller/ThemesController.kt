@@ -122,6 +122,15 @@ class ThemesController(
     }
 
     /**
+     * Delete all themes.
+     */
+    @DeleteMapping("/all")
+    fun deleteAllThemes() {
+        log.debug("DELETE /themes/all")
+        themesService.deleteAllThemes()
+    }
+
+    /**
      * Add a student to a theme.
      * @param themeId the id of the theme to add the student to
      * @param studentId the id of the student to add

@@ -176,22 +176,47 @@ class ThemesService(
         val theme = themesRepository.findById(themeId)
             .orElseThrow { ThemeNotFoundException(themeId) }
 
-        themesRepository.delete(theme)
+        // Build DTO before any mutation so lazy collections are still accessible
+        val dto = theme.toResponseDto()
+
+        // Explicitly delete ThemeSpecializationStudent records via repository.
+        // Relying on orphanRemoval is unreliable here because StudentEntity.specializationThemes
+        // also has orphanRemoval = true, causing Hibernate to conflict on bidirectional ownership.
+        theme.specializations.forEach { specialization ->
+            themeSpecializationStudentRepository.deleteByThemeIdAndSpecializationName(themeId, specialization)
+        }
+        entityManager.flush()
+
+        // Clear the ManyToMany join table (theme_student_priority) — theme is the owner so JPA handles this
+        theme.priorityStudents.clear()
+        entityManager.flush()
+        entityManager.clear()
+
+        themesRepository.deleteById(themeId)
         log.info("Successfully deleted theme: {}", themeId)
 
-        return theme.toResponseDto()
+        return dto
     }
 
     /**
      * Delete multiple themes by their ids.
      * @param themeIds the ids of the themes to delete
      */
-    fun deleteThemes (themeIds: List<UUID>) {
+    fun deleteThemes(themeIds: List<UUID>) {
         log.info("Deleting themes: {}", themeIds)
 
         val themes = themesRepository.findAllById(themeIds)
         themesRepository.deleteAll(themes)
         log.info("Successfully deleted themes: {}", themeIds)
+    }
+
+    /**
+     * Delete all themes.
+     */
+    fun deleteAllThemes() {
+        log.warn("Deleting ALL themes")
+        themesRepository.deleteAll()
+        log.info("Successfully deleted all themes")
     }
 
     /**
@@ -367,7 +392,7 @@ class ThemesService(
             .orElseThrow { StudentNotFoundException(studentId) }
 
         return student.themes.map { theme ->
-            val priority = theme.priorityStudents.indexOfFirst { it.id == studentId }
+            val priority = theme.priorityStudents.indexOfFirst { it?.id == studentId }
             ThemeWithPriorityDto(
                 themeId = theme.id!!,
                 themeName = theme.name,
@@ -375,7 +400,7 @@ class ThemesService(
                 description = theme.description,
                 author = theme.author
             )
-        }.filter { it.priority >= 0 } // Only themes where the student is actually present
+        }.filter { it.priority >= 0 }
     }
 
     /**
@@ -645,14 +670,19 @@ class ThemesService(
         val theme = themesRepository.findById(themeId)
             .orElseThrow { ThemeNotFoundException(themeId) }
 
-        // Checking existence of specialisation
-        require(theme.hasSpecialization(specialization)) {
-            "Specialization '$specialization' not found in theme"
-        }
+        val exactSpecializationName = theme.getExactSpecializationName(specialization)
+            ?: throw IllegalArgumentException("Specialization '$specialization' not found in theme")
 
-        theme.removeSpecialization(specialization)
+        // Delete ThemeSpecializationStudent records directly — more reliable than orphanRemoval
+        // because StudentEntity.specializationThemes also has orphanRemoval = true (bidirectional conflict).
+        themeSpecializationStudentRepository.deleteByThemeIdAndSpecializationName(themeId, exactSpecializationName)
+        entityManager.flush()
+        entityManager.clear()
 
-        val updatedTheme = themesRepository.save(theme)
+        val freshTheme = themesRepository.findById(themeId)
+            .orElseThrow { ThemeNotFoundException(themeId) }
+        freshTheme.specializations.remove(exactSpecializationName)
+        val updatedTheme = themesRepository.save(freshTheme)
         log.info("Successfully removed specialization {} from theme {}", specialization, themeId)
 
         return updatedTheme.toResponseDto()
