@@ -795,16 +795,16 @@ POST /themes/{themeId}/specializations/{specializationName}/students/{studentId}
 ```
 **Пример:**
 ```bash
-curl -X POST "http://localhost:8080/api/themes/660e8400-e29b-41d4-a716-446655440000/specializations/Machine Learning/students/550e8400-e29b-41d4-a716-446655440003"
+curl -X POST "http://localhost:8080/themes/660e8400-e29b-41d4-a716-446655440000/specializations/Machine Learning/students/550e8400-e29b-41d4-a716-446655440003"
 ```
 
 **<a id="34-удалить-студента-из-специализации">34. Удалить студента из специализации</a>**
 ```http
-DELETE /api/themes/{themeId}/specializations/{specializationName}/students/{studentId}
+DELETE /themes/{themeId}/specializations/{specializationName}/students/{studentId}
 ```
 **Пример:**
 ```bash
-curl -X DELETE "http://localhost:8080/api/themes/660e8400-e29b-41d4-a716-446655440000/specializations/Machine Learning/students/550e8400-e29b-41d4-a716-446655440003"
+curl -X DELETE "http://localhost:8080/themes/660e8400-e29b-41d4-a716-446655440000/specializations/Machine Learning/students/550e8400-e29b-41d4-a716-446655440003"
 ```
 
 **<a id="35-получить-студентов-специализации">35. Получить студентов специализации</a>**

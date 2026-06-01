@@ -76,8 +76,6 @@ logging:
 
 **<a id="health-checks">Health checks:</a>**
 ```bash
-# Проверка бэкенда
-curl http://localhost:8080/api/actuator/health
 
 # Проверка базы данных
 psql -h localhost -U postgres -d student_themes -c "SELECT version();"
@@ -86,5 +84,5 @@ psql -h localhost -U postgres -d student_themes -c "SELECT version();"
 curl http://localhost:8000/health
 
 # Проверка интеграции
-curl http://localhost:8080/api/themes/ml-health
+curl http://localhost:8080/themes/ml-health
 ```
