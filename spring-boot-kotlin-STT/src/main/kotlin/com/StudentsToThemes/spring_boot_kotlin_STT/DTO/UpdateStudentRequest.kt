@@ -3,7 +3,6 @@ package com.StudentsToThemes.spring_boot_kotlin_STT.DTO
 import jakarta.validation.constraints.NotBlank
 import jakarta.validation.constraints.Size
 
-//Maybe need to change, because now is same as CreateStudentRequest
 data class UpdateStudentRequest(
     @field:NotBlank(message = "Name is Required")
     @field:Size(max = 100, message = "Name must not exceed 100 characters")
