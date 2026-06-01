@@ -8,6 +8,7 @@ import com.StudentsToThemes.spring_boot_kotlin_STT.queriesBuilder.StudentSpecifi
 import com.StudentsToThemes.spring_boot_kotlin_STT.repository.StudentsRepository
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
+import org.springframework.transaction.annotation.Transactional
 import java.time.Instant
 import java.util.UUID
 
@@ -216,15 +217,20 @@ class StudentsService(
      * Delete a student by id.
      * @param id the id of the student to delete
      */
+    @Transactional
     fun deleteStudent(id: UUID) {
         log.warn("Deleting student with id: {}", id)
 
-        if (!studentsRepository.existsById(id)) {
+        val student = studentsRepository.findById(id).orElseThrow {
             log.error("Cannot delete student - student not found with id: {}", id)
-            throw StudentNotFoundException(id)
+            StudentNotFoundException(id)
         }
 
-        studentsRepository.deleteById(id)
+        // Remove from each theme's priorityStudents so Hibernate reorders @OrderColumn correctly.
+        // Using native SQL here would leave gaps in priority_order causing NPE on load.
+        student.themes.forEach { theme -> theme.priorityStudents.remove(student) }
+
+        studentsRepository.delete(student)
         log.info("Successfully deleted student with id: {}", id)
     }
 
@@ -232,17 +238,34 @@ class StudentsService(
      * Delete students by ids.
      * @param ids the ids of the students to delete
      */
+    @Transactional
     fun deleteStudents(ids: List<UUID>) {
         log.warn("Deleting {} students with ids: {}", ids.size, ids)
-        studentsRepository.deleteAllById(ids)
+
+        val students = studentsRepository.findAllById(ids)
+        val foundIds = students.map { it.id!! }.toSet()
+        val missingIds = ids.toSet() - foundIds
+        if (missingIds.isNotEmpty()) {
+            log.error("Cannot delete students - students not found with ids: {}", missingIds)
+            throw StudentNotFoundException(missingIds.first())
+        }
+
+        students.forEach { student ->
+            student.themes.forEach { theme -> theme.priorityStudents.remove(student) }
+        }
+
+        studentsRepository.deleteAll(students)
         log.info("Successfully deleted {} students", ids.size)
     }
 
     /**
      * Delete all students.
      */
+    @Transactional
     fun deleteAllStudents() {
         log.warn("Deleting ALL students")
+        // Clearing the entire join table is safe — no ordering gaps possible
+        studentsRepository.deleteAllFromThemeStudentPriority()
         studentsRepository.deleteAll()
         log.info("Successfully deleted all students")
     }
@@ -250,9 +273,16 @@ class StudentsService(
     /**
      * Delete unactive students.
      */
+    @Transactional
     fun deleteUnactiveStudents() {
         log.debug("Deleting unactive students")
-        studentsRepository.deleteAllByActiveFalse()
+        val inactive = studentsRepository.findAllByActiveFalse()
+        if (inactive.isNotEmpty()) {
+            inactive.forEach { student ->
+                student.themes.forEach { theme -> theme.priorityStudents.remove(student) }
+            }
+            studentsRepository.deleteAll(inactive)
+        }
         log.info("Successfully deleted unactive students")
     }
 }
