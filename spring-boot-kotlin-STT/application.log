@@ -1,0 +1,1079 @@
+2026-06-01T17:01:37.364+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [main] c.S.s.SpringBootKotlinSttApplicationKt   : Starting SpringBootKotlinSttApplicationKt v1.0.0-dev using Java 21.0.4 with PID 5384 (C:\Users\ПК-ДОМ\Desktop\3SEM\OOP\4-sem\students_to_themesXXX\spring-boot-kotlin-STT\build\classes\kotlin\main started by Netnol in C:\Users\ПК-ДОМ\Desktop\3SEM\OOP\4-sem\students_to_themesXXX\spring-boot-kotlin-STT)
+2026-06-01T17:01:37.365+03:00 DEBUG 5384 --- [spring-boot-kotlin-STT] [main] c.S.s.SpringBootKotlinSttApplicationKt   : Running with Spring Boot v3.5.7, Spring v6.2.12
+2026-06-01T17:01:37.365+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [main] c.S.s.SpringBootKotlinSttApplicationKt   : The following 1 profile is active: "dev"
+2026-06-01T17:01:37.961+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-01T17:01:38.023+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 3 JPA repository interfaces.
+2026-06-01T17:01:38.387+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-06-01T17:01:38.399+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-01T17:01:38.399+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-06-01T17:01:38.447+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-01T17:01:38.448+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1045 ms
+2026-06-01T17:01:38.981+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-01T17:01:39.011+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-01T17:01:39.138+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4b32465
+2026-06-01T17:01:39.140+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-01T17:01:40.164+03:00  WARN 5384 --- [spring-boot-kotlin-STT] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2026-06-01T17:01:40.164+03:00  WARN 5384 --- [spring-boot-kotlin-STT] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : constraint "uk99vrjmlewep2h42c40djld8gy" of relation "theme_specialization_students" does not exist, skipping
+2026-06-01T17:01:40.187+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-01T17:01:40.660+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-01T17:01:41.366+03:00  WARN 5384 --- [spring-boot-kotlin-STT] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-01T17:01:41.654+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-06-01T17:01:41.659+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [main] c.S.s.SpringBootKotlinSttApplicationKt   : Started SpringBootKotlinSttApplicationKt in 4.728 seconds (process running for 5.245)
+2026-06-01T17:01:50.324+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-01T17:01:50.325+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-01T17:01:50.325+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-06-01T17:01:50.366+03:00 DEBUG 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-1] c.S.s.controller.ThemesController        : GET /themes called with params: name=null, description=null, author=null
+2026-06-01T17:01:50.373+03:00 DEBUG 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-1] c.S.s.service.ThemesService              : searching themes with filters - name: null, description: null, author: null
+2026-06-01T17:02:42.539+03:00 DEBUG 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-3] c.S.s.controller.StudentsController      : POST /students called for student: Алексей Иванов
+2026-06-01T17:02:42.539+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-3] c.S.s.service.StudentsService            : Creating new student with name: Алексей Иванов
+2026-06-01T17:02:42.584+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-3] c.S.s.service.StudentsService            : Successfully created student with id: dd94a33e-205b-4128-b7ee-a377f9003aaa and name: Алексей Иванов
+2026-06-01T17:02:42.597+03:00 DEBUG 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-4] c.S.s.controller.StudentsController      : POST /students called for student: Мария Петрова
+2026-06-01T17:02:42.598+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-4] c.S.s.service.StudentsService            : Creating new student with name: Мария Петрова
+2026-06-01T17:02:42.602+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-4] c.S.s.service.StudentsService            : Successfully created student with id: 6345efd7-302d-46b5-9ac3-81f3d8755d45 and name: Мария Петрова
+2026-06-01T17:02:42.605+03:00 DEBUG 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-6] c.S.s.controller.StudentsController      : POST /students called for student: Дмитрий Сидоров
+2026-06-01T17:02:42.605+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-6] c.S.s.service.StudentsService            : Creating new student with name: Дмитрий Сидоров
+2026-06-01T17:02:42.608+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-6] c.S.s.service.StudentsService            : Successfully created student with id: 6df039c4-4a0c-4347-bd29-27aee9170a29 and name: Дмитрий Сидоров
+2026-06-01T17:02:42.611+03:00 DEBUG 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-8] c.S.s.controller.StudentsController      : POST /students called for student: Ольга Смирнова
+2026-06-01T17:02:42.611+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-8] c.S.s.service.StudentsService            : Creating new student with name: Ольга Смирнова
+2026-06-01T17:02:42.614+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-8] c.S.s.service.StudentsService            : Successfully created student with id: 923de578-b98f-4792-82c1-154c8cc74158 and name: Ольга Смирнова
+2026-06-01T17:02:42.617+03:00 DEBUG 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-10] c.S.s.controller.StudentsController      : POST /students called for student: Никита Козлов
+2026-06-01T17:02:42.617+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-10] c.S.s.service.StudentsService            : Creating new student with name: Никита Козлов
+2026-06-01T17:02:42.620+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-10] c.S.s.service.StudentsService            : Successfully created student with id: 748cd2a9-6a69-45a6-8b15-c388f7e90a5d and name: Никита Козлов
+2026-06-01T17:02:42.623+03:00 DEBUG 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-1] c.S.s.controller.StudentsController      : POST /students called for student: Екатерина Новикова
+2026-06-01T17:02:42.623+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-1] c.S.s.service.StudentsService            : Creating new student with name: Екатерина Новикова
+2026-06-01T17:02:42.626+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-1] c.S.s.service.StudentsService            : Successfully created student with id: ad574d62-2b85-42a3-9f9d-31869cb9bd63 and name: Екатерина Новикова
+2026-06-01T17:02:42.629+03:00 DEBUG 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-5] c.S.s.controller.StudentsController      : POST /students called for student: Андрей Волков
+2026-06-01T17:02:42.629+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-5] c.S.s.service.StudentsService            : Creating new student with name: Андрей Волков
+2026-06-01T17:02:42.633+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-5] c.S.s.service.StudentsService            : Successfully created student with id: 22718208-4989-416c-9569-c1f9c2d3d0da and name: Андрей Волков
+2026-06-01T17:02:42.635+03:00 DEBUG 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-6] c.S.s.controller.StudentsController      : POST /students called for student: Светлана Морозова
+2026-06-01T17:02:42.635+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-6] c.S.s.service.StudentsService            : Creating new student with name: Светлана Морозова
+2026-06-01T17:02:42.638+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-6] c.S.s.service.StudentsService            : Successfully created student with id: b38e0049-efc8-418b-a1b9-b2509fd3fcda and name: Светлана Морозова
+2026-06-01T17:02:42.641+03:00 DEBUG 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-8] c.S.s.controller.StudentsController      : POST /students called for student: Игорь Лебедев
+2026-06-01T17:02:42.641+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-8] c.S.s.service.StudentsService            : Creating new student with name: Игорь Лебедев
+2026-06-01T17:02:42.644+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-8] c.S.s.service.StudentsService            : Successfully created student with id: 681e6516-7b88-4f23-8441-f3fd0e9d316e and name: Игорь Лебедев
+2026-06-01T17:02:42.647+03:00 DEBUG 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-10] c.S.s.controller.StudentsController      : POST /students called for student: Анна Соколова
+2026-06-01T17:02:42.647+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-10] c.S.s.service.StudentsService            : Creating new student with name: Анна Соколова
+2026-06-01T17:02:42.650+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-10] c.S.s.service.StudentsService            : Successfully created student with id: 33a855d4-9c30-4649-882e-b8d654c33048 and name: Анна Соколова
+2026-06-01T17:02:42.671+03:00 DEBUG 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-3] c.S.s.controller.ThemesController        : POST /themes
+2026-06-01T17:02:42.671+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-3] c.S.s.service.ThemesService              : Creating new theme: Разработка системы предсказания цен недвижимости
+2026-06-01T17:02:42.673+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-3] c.S.s.service.ThemesService              : Successfully created theme with id: dcbe2c5b-1d20-4686-b0af-e31ea7928199
+2026-06-01T17:02:42.749+03:00 DEBUG 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-4] c.S.s.controller.ThemesController        : POST /themes/dcbe2c5b-1d20-4686-b0af-e31ea7928199/students
+2026-06-01T17:02:42.750+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-4] c.S.s.service.ThemesService              : Adding students [dd94a33e-205b-4128-b7ee-a377f9003aaa, 6345efd7-302d-46b5-9ac3-81f3d8755d45, 6df039c4-4a0c-4347-bd29-27aee9170a29, 923de578-b98f-4792-82c1-154c8cc74158, 748cd2a9-6a69-45a6-8b15-c388f7e90a5d, ad574d62-2b85-42a3-9f9d-31869cb9bd63, 22718208-4989-416c-9569-c1f9c2d3d0da, b38e0049-efc8-418b-a1b9-b2509fd3fcda, 681e6516-7b88-4f23-8441-f3fd0e9d316e, 33a855d4-9c30-4649-882e-b8d654c33048] to theme dcbe2c5b-1d20-4686-b0af-e31ea7928199
+2026-06-01T17:02:42.789+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-4] c.S.s.service.ThemesService              : Found 10 students with given filters
+2026-06-01T17:02:42.791+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-4] c.S.s.service.ThemesService              : Successfully added 10 students to theme
+2026-06-01T17:02:42.814+03:00 DEBUG 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-7] c.S.s.controller.ThemesController        : POST /themes/dcbe2c5b-1d20-4686-b0af-e31ea7928199/copy-to-specializations
+2026-06-01T17:02:42.814+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-7] c.S.s.service.ThemesService              : Copying theme students to all specializations for theme: dcbe2c5b-1d20-4686-b0af-e31ea7928199
+2026-06-01T17:02:42.837+03:00 DEBUG 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-7] c.S.s.service.ThemesService              : Deleted all students from specialization: Machine Learning
+2026-06-01T17:02:42.839+03:00 DEBUG 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-7] c.S.s.service.ThemesService              : Deleted all students from specialization: Data Science
+2026-06-01T17:02:42.840+03:00 DEBUG 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-7] c.S.s.service.ThemesService              : Deleted all students from specialization: Backend
+2026-06-01T17:02:42.849+03:00 DEBUG 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-7] c.S.s.service.ThemesService              : Copied 10 students to specialization: Machine Learning
+2026-06-01T17:02:42.851+03:00 DEBUG 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-7] c.S.s.service.ThemesService              : Copied 10 students to specialization: Data Science
+2026-06-01T17:02:42.852+03:00 DEBUG 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-7] c.S.s.service.ThemesService              : Copied 10 students to specialization: Backend
+2026-06-01T17:02:42.862+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-7] c.S.s.service.ThemesService              : Successfully copied theme students to all specializations for theme: dcbe2c5b-1d20-4686-b0af-e31ea7928199
+2026-06-01T17:02:42.903+03:00 DEBUG 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-9] c.S.s.controller.ThemesController        : POST /themes/dcbe2c5b-1d20-4686-b0af-e31ea7928199/specializations/Machine Learning/ml-sort
+2026-06-01T17:02:42.903+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-9] c.S.s.service.ThemesService              : ML sorting specialization: Machine Learning in theme: dcbe2c5b-1d20-4686-b0af-e31ea7928199
+2026-06-01T17:02:42.919+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-9] c.S.s.service.MLSortingService           : ML sorting for specialization: Machine Learning in theme: dcbe2c5b-1d20-4686-b0af-e31ea7928199
+2026-06-01T17:02:43.426+03:00 DEBUG 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-2] c.S.s.controller.ThemesController        : POST /themes/dcbe2c5b-1d20-4686-b0af-e31ea7928199/specializations/Data Science/ml-sort
+2026-06-01T17:02:43.427+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-2] c.S.s.service.ThemesService              : ML sorting specialization: Data Science in theme: dcbe2c5b-1d20-4686-b0af-e31ea7928199
+2026-06-01T17:02:43.438+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-2] c.S.s.service.MLSortingService           : ML sorting for specialization: Data Science in theme: dcbe2c5b-1d20-4686-b0af-e31ea7928199
+2026-06-01T17:02:43.545+03:00 DEBUG 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-10] c.S.s.controller.ThemesController        : POST /themes/dcbe2c5b-1d20-4686-b0af-e31ea7928199/specializations/Backend/ml-sort
+2026-06-01T17:02:43.546+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-10] c.S.s.service.ThemesService              : ML sorting specialization: Backend in theme: dcbe2c5b-1d20-4686-b0af-e31ea7928199
+2026-06-01T17:02:43.555+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-10] c.S.s.service.MLSortingService           : ML sorting for specialization: Backend in theme: dcbe2c5b-1d20-4686-b0af-e31ea7928199
+2026-06-01T17:02:43.671+03:00 DEBUG 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-4] c.S.s.controller.ThemesController        : GET /themes/dcbe2c5b-1d20-4686-b0af-e31ea7928199/specializations/Machine Learning/students?limit=null&useMLSorting=true&onlyActive=true
+2026-06-01T17:02:43.672+03:00 DEBUG 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-4] c.S.s.service.ThemesService              : Getting students for specialization Machine Learning in theme dcbe2c5b-1d20-4686-b0af-e31ea7928199 with limit: null, ML: true, onlyActive: true
+2026-06-01T17:02:43.690+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-4] c.S.s.service.MLSortingService           : ML sorting for specialization: Machine Learning in theme: dcbe2c5b-1d20-4686-b0af-e31ea7928199
+2026-06-01T17:02:43.778+03:00 DEBUG 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-6] c.S.s.controller.ThemesController        : GET /themes/dcbe2c5b-1d20-4686-b0af-e31ea7928199/specializations/Data Science/students?limit=null&useMLSorting=true&onlyActive=true
+2026-06-01T17:02:43.778+03:00 DEBUG 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-6] c.S.s.service.ThemesService              : Getting students for specialization Data Science in theme dcbe2c5b-1d20-4686-b0af-e31ea7928199 with limit: null, ML: true, onlyActive: true
+2026-06-01T17:02:43.790+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-6] c.S.s.service.MLSortingService           : ML sorting for specialization: Data Science in theme: dcbe2c5b-1d20-4686-b0af-e31ea7928199
+2026-06-01T17:02:43.867+03:00 DEBUG 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-8] c.S.s.controller.ThemesController        : GET /themes/dcbe2c5b-1d20-4686-b0af-e31ea7928199/specializations/Backend/students?limit=null&useMLSorting=true&onlyActive=true
+2026-06-01T17:02:43.867+03:00 DEBUG 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-8] c.S.s.service.ThemesService              : Getting students for specialization Backend in theme dcbe2c5b-1d20-4686-b0af-e31ea7928199 with limit: null, ML: true, onlyActive: true
+2026-06-01T17:02:43.877+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-8] c.S.s.service.MLSortingService           : ML sorting for specialization: Backend in theme: dcbe2c5b-1d20-4686-b0af-e31ea7928199
+2026-06-01T17:02:53.800+03:00 DEBUG 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-5] c.S.s.controller.ThemesController        : GET /themes called with params: name=null, description=null, author=null
+2026-06-01T17:02:53.801+03:00 DEBUG 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-5] c.S.s.service.ThemesService              : searching themes with filters - name: null, description: null, author: null
+2026-06-01T17:09:25.762+03:00 DEBUG 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-4] c.S.s.controller.ThemesController        : GET /themes/dcbe2c5b-1d20-4686-b0af-e31ea7928199
+2026-06-01T17:09:25.764+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-4] c.S.s.service.ThemesService              : Getting theme by id: dcbe2c5b-1d20-4686-b0af-e31ea7928199
+2026-06-01T17:09:25.789+03:00 DEBUG 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-7] c.S.s.controller.StudentsController      : GET /students/by-ids called with ids: [dd94a33e-205b-4128-b7ee-a377f9003aaa, 6345efd7-302d-46b5-9ac3-81f3d8755d45, 6df039c4-4a0c-4347-bd29-27aee9170a29, 923de578-b98f-4792-82c1-154c8cc74158, 748cd2a9-6a69-45a6-8b15-c388f7e90a5d, ad574d62-2b85-42a3-9f9d-31869cb9bd63, 22718208-4989-416c-9569-c1f9c2d3d0da, b38e0049-efc8-418b-a1b9-b2509fd3fcda, 681e6516-7b88-4f23-8441-f3fd0e9d316e, 33a855d4-9c30-4649-882e-b8d654c33048]
+2026-06-01T17:09:25.789+03:00 DEBUG 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-7] c.S.s.service.StudentsService            : Getting students by ids: [dd94a33e-205b-4128-b7ee-a377f9003aaa, 6345efd7-302d-46b5-9ac3-81f3d8755d45, 6df039c4-4a0c-4347-bd29-27aee9170a29, 923de578-b98f-4792-82c1-154c8cc74158, 748cd2a9-6a69-45a6-8b15-c388f7e90a5d, ad574d62-2b85-42a3-9f9d-31869cb9bd63, 22718208-4989-416c-9569-c1f9c2d3d0da, b38e0049-efc8-418b-a1b9-b2509fd3fcda, 681e6516-7b88-4f23-8441-f3fd0e9d316e, 33a855d4-9c30-4649-882e-b8d654c33048]
+2026-06-01T17:09:25.796+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-7] c.S.s.service.StudentsService            : Found 10 students with given filters
+2026-06-01T17:09:25.806+03:00 DEBUG 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-9] c.S.s.controller.ThemesController        : GET /themes/dcbe2c5b-1d20-4686-b0af-e31ea7928199/specializations/Machine Learning/students?limit=null&useMLSorting=true&onlyActive=true
+2026-06-01T17:09:25.807+03:00 DEBUG 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-9] c.S.s.service.ThemesService              : Getting students for specialization Machine Learning in theme dcbe2c5b-1d20-4686-b0af-e31ea7928199 with limit: null, ML: true, onlyActive: true
+2026-06-01T17:09:25.814+03:00  WARN 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-9] c.S.s.service.MLSortingService           : ML service unavailable: I/O error on GET request for "http://localhost:8000/health": Connection refused: connect
+2026-06-01T17:09:25.818+03:00 DEBUG 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-1] c.S.s.controller.ThemesController        : GET /themes/dcbe2c5b-1d20-4686-b0af-e31ea7928199/specializations/Data Science/students?limit=null&useMLSorting=true&onlyActive=true
+2026-06-01T17:09:25.818+03:00 DEBUG 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-1] c.S.s.service.ThemesService              : Getting students for specialization Data Science in theme dcbe2c5b-1d20-4686-b0af-e31ea7928199 with limit: null, ML: true, onlyActive: true
+2026-06-01T17:09:25.823+03:00  WARN 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-1] c.S.s.service.MLSortingService           : ML service unavailable: I/O error on GET request for "http://localhost:8000/health": Connection refused: connect
+2026-06-01T17:09:25.827+03:00 DEBUG 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-5] c.S.s.controller.ThemesController        : GET /themes/dcbe2c5b-1d20-4686-b0af-e31ea7928199/specializations/Backend/students?limit=null&useMLSorting=true&onlyActive=true
+2026-06-01T17:09:25.827+03:00 DEBUG 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-5] c.S.s.service.ThemesService              : Getting students for specialization Backend in theme dcbe2c5b-1d20-4686-b0af-e31ea7928199 with limit: null, ML: true, onlyActive: true
+2026-06-01T17:09:25.833+03:00  WARN 5384 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-5] c.S.s.service.MLSortingService           : ML service unavailable: I/O error on GET request for "http://localhost:8000/health": Connection refused: connect
+2026-06-01T17:11:28.067+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-01T17:11:28.071+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-06-01T17:11:28.073+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-01T17:11:28.075+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-01T17:11:28.078+03:00  INFO 5384 --- [spring-boot-kotlin-STT] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-01T17:11:31.385+03:00  INFO 40304 --- [spring-boot-kotlin-STT] [main] c.S.s.SpringBootKotlinSttApplicationKt   : Starting SpringBootKotlinSttApplicationKt v1.0.0-dev using Java 21.0.4 with PID 40304 (C:\Users\ПК-ДОМ\Desktop\3SEM\OOP\4-sem\students_to_themesXXX\spring-boot-kotlin-STT\build\classes\kotlin\main started by Netnol in C:\Users\ПК-ДОМ\Desktop\3SEM\OOP\4-sem\students_to_themesXXX\spring-boot-kotlin-STT)
+2026-06-01T17:11:31.386+03:00 DEBUG 40304 --- [spring-boot-kotlin-STT] [main] c.S.s.SpringBootKotlinSttApplicationKt   : Running with Spring Boot v3.5.7, Spring v6.2.12
+2026-06-01T17:11:31.387+03:00  INFO 40304 --- [spring-boot-kotlin-STT] [main] c.S.s.SpringBootKotlinSttApplicationKt   : The following 1 profile is active: "dev"
+2026-06-01T17:11:31.938+03:00  INFO 40304 --- [spring-boot-kotlin-STT] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-01T17:11:31.997+03:00  INFO 40304 --- [spring-boot-kotlin-STT] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 3 JPA repository interfaces.
+2026-06-01T17:11:32.317+03:00  INFO 40304 --- [spring-boot-kotlin-STT] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-06-01T17:11:32.327+03:00  INFO 40304 --- [spring-boot-kotlin-STT] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-01T17:11:32.327+03:00  INFO 40304 --- [spring-boot-kotlin-STT] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-06-01T17:11:32.376+03:00  INFO 40304 --- [spring-boot-kotlin-STT] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-01T17:11:32.376+03:00  INFO 40304 --- [spring-boot-kotlin-STT] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 953 ms
+2026-06-01T17:11:32.837+03:00  INFO 40304 --- [spring-boot-kotlin-STT] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-01T17:11:32.867+03:00  INFO 40304 --- [spring-boot-kotlin-STT] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-01T17:11:33.992+03:00  INFO 40304 --- [spring-boot-kotlin-STT] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@39dda56f
+2026-06-01T17:11:33.994+03:00  INFO 40304 --- [spring-boot-kotlin-STT] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-01T17:11:54.633+03:00  WARN 40304 --- [spring-boot-kotlin-STT] [main] com.zaxxer.hikari.pool.ProxyConnection   : HikariPool-1 - Connection org.postgresql.jdbc.PgConnection@39dda56f marked as broken because of SQLSTATE(08006), ErrorCode(0)
+
+org.postgresql.util.PSQLException: Ошибка ввода/вывода при отправке бэкенду
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:399) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:525) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:357) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:342) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:318) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:268) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgDatabaseMetaData.getMaxIndexKeys(PgDatabaseMetaData.java:70) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgDatabaseMetaData.getImportedExportedKeys(PgDatabaseMetaData.java:2615) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgDatabaseMetaData.getImportedKeys(PgDatabaseMetaData.java:2674) ~[postgresql-42.7.8.jar:42.7.8]
+	at com.zaxxer.hikari.pool.ProxyDatabaseMetaData.getImportedKeys(ProxyDatabaseMetaData.java:189) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyDatabaseMetaData.getImportedKeys(HikariProxyDatabaseMetaData.java) ~[HikariCP-6.3.3.jar:na]
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processImportedKeysResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:129) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getForeignKeys(AbstractInformationExtractorImpl.java:1417) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.tool.schema.extract.internal.TableInformationImpl.foreignKeys(TableInformationImpl.java:97) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.tool.schema.extract.internal.TableInformationImpl.getForeignKeys(TableInformationImpl.java:91) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.equivalentForeignKeyExistsInDatabase(AbstractSchemaMigrator.java:485) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.checkForExistingForeignKey(AbstractSchemaMigrator.java:477) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applyForeignKeys(AbstractSchemaMigrator.java:444) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:269) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:112) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:280) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:324) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:463) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1517) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:973) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.7.jar:3.5.7]
+	at com.StudentsToThemes.spring_boot_kotlin_STT.SpringBootKotlinSttApplicationKt.main(SpringBootKotlinSttApplication.kt:13) ~[main/:na]
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1066) ~[na:na]
+	at org.postgresql.core.VisibleBufferedInputStream.readMore(VisibleBufferedInputStream.java:192) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.VisibleBufferedInputStream.ensureBytes(VisibleBufferedInputStream.java:159) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.VisibleBufferedInputStream.ensureBytes(VisibleBufferedInputStream.java:144) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.VisibleBufferedInputStream.read(VisibleBufferedInputStream.java:76) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.PGStream.receiveChar(PGStream.java:477) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2175) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:372) ~[postgresql-42.7.8.jar:42.7.8]
+	... 51 common frames omitted
+
+2026-06-01T17:11:54.639+03:00  WARN 40304 --- [spring-boot-kotlin-STT] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 08006
+2026-06-01T17:11:54.639+03:00 ERROR 40304 --- [spring-boot-kotlin-STT] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Ошибка ввода/вывода при отправке бэкенду
+2026-06-01T17:11:54.643+03:00 ERROR 40304 --- [spring-boot-kotlin-STT] [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Error accessing column metadata: postgres.public.theme_ml_sorted_specializations [Ошибка ввода/вывода при отправке бэкенду] [n/a]
+2026-06-01T17:11:54.643+03:00  WARN 40304 --- [spring-boot-kotlin-STT] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Error accessing column metadata: postgres.public.theme_ml_sorted_specializations [Ошибка ввода/вывода при отправке бэкенду] [n/a]
+2026-06-01T17:11:54.644+03:00  INFO 40304 --- [spring-boot-kotlin-STT] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-01T17:11:55.189+03:00  INFO 40304 --- [spring-boot-kotlin-STT] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-01T17:11:55.191+03:00  INFO 40304 --- [spring-boot-kotlin-STT] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-06-01T17:11:55.198+03:00  INFO 40304 --- [spring-boot-kotlin-STT] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-01T17:11:55.214+03:00 ERROR 40304 --- [spring-boot-kotlin-STT] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Error accessing column metadata: postgres.public.theme_ml_sorted_specializations [Ошибка ввода/вывода при отправке бэкенду] [n/a]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1826) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:973) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.7.jar:3.5.7]
+	at com.StudentsToThemes.spring_boot_kotlin_STT.SpringBootKotlinSttApplicationKt.main(SpringBootKotlinSttApplication.kt:13) ~[main/:na]
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Error accessing column metadata: postgres.public.theme_ml_sorted_specializations [Ошибка ввода/вывода при отправке бэкенду] [n/a]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:431) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.12.jar:6.2.12]
+	... 15 common frames omitted
+Caused by: org.hibernate.exception.JDBCConnectionException: Error accessing column metadata: postgres.public.theme_ml_sorted_specializations [Ошибка ввода/вывода при отправке бэкенду] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.convertSQLException(AbstractInformationExtractorImpl.java:124) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getForeignKeys(AbstractInformationExtractorImpl.java:1436) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.tool.schema.extract.internal.TableInformationImpl.foreignKeys(TableInformationImpl.java:97) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.tool.schema.extract.internal.TableInformationImpl.getForeignKeys(TableInformationImpl.java:91) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.equivalentForeignKeyExistsInDatabase(AbstractSchemaMigrator.java:485) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.checkForExistingForeignKey(AbstractSchemaMigrator.java:477) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applyForeignKeys(AbstractSchemaMigrator.java:444) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:269) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:112) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:280) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:324) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:463) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1517) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.12.jar:6.2.12]
+	... 19 common frames omitted
+Caused by: org.postgresql.util.PSQLException: Ошибка ввода/вывода при отправке бэкенду
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:399) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:525) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:357) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:342) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:318) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:268) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgDatabaseMetaData.getMaxIndexKeys(PgDatabaseMetaData.java:70) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgDatabaseMetaData.getImportedExportedKeys(PgDatabaseMetaData.java:2615) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgDatabaseMetaData.getImportedKeys(PgDatabaseMetaData.java:2674) ~[postgresql-42.7.8.jar:42.7.8]
+	at com.zaxxer.hikari.pool.ProxyDatabaseMetaData.getImportedKeys(ProxyDatabaseMetaData.java:189) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyDatabaseMetaData.getImportedKeys(HikariProxyDatabaseMetaData.java) ~[HikariCP-6.3.3.jar:na]
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processImportedKeysResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:129) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getForeignKeys(AbstractInformationExtractorImpl.java:1417) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	... 38 common frames omitted
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1066) ~[na:na]
+	at org.postgresql.core.VisibleBufferedInputStream.readMore(VisibleBufferedInputStream.java:192) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.VisibleBufferedInputStream.ensureBytes(VisibleBufferedInputStream.java:159) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.VisibleBufferedInputStream.ensureBytes(VisibleBufferedInputStream.java:144) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.VisibleBufferedInputStream.read(VisibleBufferedInputStream.java:76) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.PGStream.receiveChar(PGStream.java:477) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2175) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:372) ~[postgresql-42.7.8.jar:42.7.8]
+	... 51 common frames omitted
+
+2026-06-01T17:12:06.136+03:00  INFO 1808 --- [spring-boot-kotlin-STT] [main] c.S.s.SpringBootKotlinSttApplicationKt   : Starting SpringBootKotlinSttApplicationKt v1.0.0-dev using Java 21.0.4 with PID 1808 (C:\Users\ПК-ДОМ\Desktop\3SEM\OOP\4-sem\students_to_themesXXX\spring-boot-kotlin-STT\build\classes\kotlin\main started by Netnol in C:\Users\ПК-ДОМ\Desktop\3SEM\OOP\4-sem\students_to_themesXXX\spring-boot-kotlin-STT)
+2026-06-01T17:12:06.137+03:00 DEBUG 1808 --- [spring-boot-kotlin-STT] [main] c.S.s.SpringBootKotlinSttApplicationKt   : Running with Spring Boot v3.5.7, Spring v6.2.12
+2026-06-01T17:12:06.138+03:00  INFO 1808 --- [spring-boot-kotlin-STT] [main] c.S.s.SpringBootKotlinSttApplicationKt   : The following 1 profile is active: "dev"
+2026-06-01T17:12:06.636+03:00  INFO 1808 --- [spring-boot-kotlin-STT] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-01T17:12:06.690+03:00  INFO 1808 --- [spring-boot-kotlin-STT] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 3 JPA repository interfaces.
+2026-06-01T17:12:06.998+03:00  INFO 1808 --- [spring-boot-kotlin-STT] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-06-01T17:12:07.009+03:00  INFO 1808 --- [spring-boot-kotlin-STT] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-01T17:12:07.010+03:00  INFO 1808 --- [spring-boot-kotlin-STT] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-06-01T17:12:07.055+03:00  INFO 1808 --- [spring-boot-kotlin-STT] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-01T17:12:07.056+03:00  INFO 1808 --- [spring-boot-kotlin-STT] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 884 ms
+2026-06-01T17:12:07.512+03:00  INFO 1808 --- [spring-boot-kotlin-STT] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-01T17:12:07.539+03:00  INFO 1808 --- [spring-boot-kotlin-STT] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-01T17:12:08.305+03:00  INFO 1808 --- [spring-boot-kotlin-STT] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2bcb1414
+2026-06-01T17:12:08.306+03:00  INFO 1808 --- [spring-boot-kotlin-STT] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-01T17:12:29.110+03:00  WARN 1808 --- [spring-boot-kotlin-STT] [main] com.zaxxer.hikari.pool.ProxyConnection   : HikariPool-1 - Connection org.postgresql.jdbc.PgConnection@2bcb1414 marked as broken because of SQLSTATE(08006), ErrorCode(0)
+
+org.postgresql.util.PSQLException: Ошибка ввода/вывода при отправке бэкенду
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:399) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:525) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:357) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:342) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:318) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:268) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgDatabaseMetaData.getMaxIndexKeys(PgDatabaseMetaData.java:70) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgDatabaseMetaData.getImportedExportedKeys(PgDatabaseMetaData.java:2615) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgDatabaseMetaData.getImportedKeys(PgDatabaseMetaData.java:2674) ~[postgresql-42.7.8.jar:42.7.8]
+	at com.zaxxer.hikari.pool.ProxyDatabaseMetaData.getImportedKeys(ProxyDatabaseMetaData.java:189) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyDatabaseMetaData.getImportedKeys(HikariProxyDatabaseMetaData.java) ~[HikariCP-6.3.3.jar:na]
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processImportedKeysResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:129) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getForeignKeys(AbstractInformationExtractorImpl.java:1417) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.tool.schema.extract.internal.TableInformationImpl.foreignKeys(TableInformationImpl.java:97) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.tool.schema.extract.internal.TableInformationImpl.getForeignKeys(TableInformationImpl.java:91) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.equivalentForeignKeyExistsInDatabase(AbstractSchemaMigrator.java:485) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.checkForExistingForeignKey(AbstractSchemaMigrator.java:477) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applyForeignKeys(AbstractSchemaMigrator.java:444) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:269) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:112) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:280) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:324) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:463) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1517) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:973) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.7.jar:3.5.7]
+	at com.StudentsToThemes.spring_boot_kotlin_STT.SpringBootKotlinSttApplicationKt.main(SpringBootKotlinSttApplication.kt:13) ~[main/:na]
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1066) ~[na:na]
+	at org.postgresql.core.VisibleBufferedInputStream.readMore(VisibleBufferedInputStream.java:192) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.VisibleBufferedInputStream.ensureBytes(VisibleBufferedInputStream.java:159) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.VisibleBufferedInputStream.ensureBytes(VisibleBufferedInputStream.java:144) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.VisibleBufferedInputStream.read(VisibleBufferedInputStream.java:76) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.PGStream.receiveChar(PGStream.java:477) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2175) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:372) ~[postgresql-42.7.8.jar:42.7.8]
+	... 51 common frames omitted
+
+2026-06-01T17:12:29.116+03:00  WARN 1808 --- [spring-boot-kotlin-STT] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 08006
+2026-06-01T17:12:29.116+03:00 ERROR 1808 --- [spring-boot-kotlin-STT] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Ошибка ввода/вывода при отправке бэкенду
+2026-06-01T17:12:29.120+03:00 ERROR 1808 --- [spring-boot-kotlin-STT] [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Error accessing column metadata: postgres.public.theme_ml_sorted_specializations [Ошибка ввода/вывода при отправке бэкенду] [n/a]
+2026-06-01T17:12:29.120+03:00  WARN 1808 --- [spring-boot-kotlin-STT] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Error accessing column metadata: postgres.public.theme_ml_sorted_specializations [Ошибка ввода/вывода при отправке бэкенду] [n/a]
+2026-06-01T17:12:29.120+03:00  INFO 1808 --- [spring-boot-kotlin-STT] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-01T17:12:29.768+03:00  INFO 1808 --- [spring-boot-kotlin-STT] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-01T17:12:29.769+03:00  INFO 1808 --- [spring-boot-kotlin-STT] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-06-01T17:12:29.777+03:00  INFO 1808 --- [spring-boot-kotlin-STT] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-01T17:12:29.792+03:00 ERROR 1808 --- [spring-boot-kotlin-STT] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Error accessing column metadata: postgres.public.theme_ml_sorted_specializations [Ошибка ввода/вывода при отправке бэкенду] [n/a]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1826) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:973) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.7.jar:3.5.7]
+	at com.StudentsToThemes.spring_boot_kotlin_STT.SpringBootKotlinSttApplicationKt.main(SpringBootKotlinSttApplication.kt:13) ~[main/:na]
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Error accessing column metadata: postgres.public.theme_ml_sorted_specializations [Ошибка ввода/вывода при отправке бэкенду] [n/a]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:431) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.12.jar:6.2.12]
+	... 15 common frames omitted
+Caused by: org.hibernate.exception.JDBCConnectionException: Error accessing column metadata: postgres.public.theme_ml_sorted_specializations [Ошибка ввода/вывода при отправке бэкенду] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.convertSQLException(AbstractInformationExtractorImpl.java:124) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getForeignKeys(AbstractInformationExtractorImpl.java:1436) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.tool.schema.extract.internal.TableInformationImpl.foreignKeys(TableInformationImpl.java:97) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.tool.schema.extract.internal.TableInformationImpl.getForeignKeys(TableInformationImpl.java:91) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.equivalentForeignKeyExistsInDatabase(AbstractSchemaMigrator.java:485) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.checkForExistingForeignKey(AbstractSchemaMigrator.java:477) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applyForeignKeys(AbstractSchemaMigrator.java:444) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:269) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:112) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:280) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:324) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:463) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1517) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.12.jar:6.2.12]
+	... 19 common frames omitted
+Caused by: org.postgresql.util.PSQLException: Ошибка ввода/вывода при отправке бэкенду
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:399) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:525) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:357) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:342) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:318) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:268) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgDatabaseMetaData.getMaxIndexKeys(PgDatabaseMetaData.java:70) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgDatabaseMetaData.getImportedExportedKeys(PgDatabaseMetaData.java:2615) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgDatabaseMetaData.getImportedKeys(PgDatabaseMetaData.java:2674) ~[postgresql-42.7.8.jar:42.7.8]
+	at com.zaxxer.hikari.pool.ProxyDatabaseMetaData.getImportedKeys(ProxyDatabaseMetaData.java:189) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyDatabaseMetaData.getImportedKeys(HikariProxyDatabaseMetaData.java) ~[HikariCP-6.3.3.jar:na]
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processImportedKeysResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:129) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getForeignKeys(AbstractInformationExtractorImpl.java:1417) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	... 38 common frames omitted
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1066) ~[na:na]
+	at org.postgresql.core.VisibleBufferedInputStream.readMore(VisibleBufferedInputStream.java:192) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.VisibleBufferedInputStream.ensureBytes(VisibleBufferedInputStream.java:159) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.VisibleBufferedInputStream.ensureBytes(VisibleBufferedInputStream.java:144) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.VisibleBufferedInputStream.read(VisibleBufferedInputStream.java:76) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.PGStream.receiveChar(PGStream.java:477) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2175) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:372) ~[postgresql-42.7.8.jar:42.7.8]
+	... 51 common frames omitted
+
+2026-06-01T17:12:36.755+03:00  INFO 46872 --- [spring-boot-kotlin-STT] [main] c.S.s.SpringBootKotlinSttApplicationKt   : Starting SpringBootKotlinSttApplicationKt v1.0.0-dev using Java 21.0.4 with PID 46872 (C:\Users\ПК-ДОМ\Desktop\3SEM\OOP\4-sem\students_to_themesXXX\spring-boot-kotlin-STT\build\classes\kotlin\main started by Netnol in C:\Users\ПК-ДОМ\Desktop\3SEM\OOP\4-sem\students_to_themesXXX\spring-boot-kotlin-STT)
+2026-06-01T17:12:36.757+03:00 DEBUG 46872 --- [spring-boot-kotlin-STT] [main] c.S.s.SpringBootKotlinSttApplicationKt   : Running with Spring Boot v3.5.7, Spring v6.2.12
+2026-06-01T17:12:36.758+03:00  INFO 46872 --- [spring-boot-kotlin-STT] [main] c.S.s.SpringBootKotlinSttApplicationKt   : The following 1 profile is active: "dev"
+2026-06-01T17:12:37.367+03:00  INFO 46872 --- [spring-boot-kotlin-STT] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-01T17:12:37.430+03:00  INFO 46872 --- [spring-boot-kotlin-STT] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 3 JPA repository interfaces.
+2026-06-01T17:12:37.766+03:00  INFO 46872 --- [spring-boot-kotlin-STT] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-06-01T17:12:37.777+03:00  INFO 46872 --- [spring-boot-kotlin-STT] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-01T17:12:37.778+03:00  INFO 46872 --- [spring-boot-kotlin-STT] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-06-01T17:12:37.826+03:00  INFO 46872 --- [spring-boot-kotlin-STT] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-01T17:12:37.827+03:00  INFO 46872 --- [spring-boot-kotlin-STT] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1013 ms
+2026-06-01T17:12:38.298+03:00  INFO 46872 --- [spring-boot-kotlin-STT] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-01T17:12:38.327+03:00  INFO 46872 --- [spring-boot-kotlin-STT] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-01T17:12:39.301+03:00  INFO 46872 --- [spring-boot-kotlin-STT] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1fbd5e0
+2026-06-01T17:12:39.303+03:00  INFO 46872 --- [spring-boot-kotlin-STT] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-01T17:12:42.272+03:00  INFO 46872 --- [spring-boot-kotlin-STT] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-01T17:12:42.743+03:00  INFO 46872 --- [spring-boot-kotlin-STT] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-01T17:12:43.423+03:00  WARN 46872 --- [spring-boot-kotlin-STT] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-01T17:12:43.685+03:00  INFO 46872 --- [spring-boot-kotlin-STT] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-06-01T17:12:43.690+03:00  INFO 46872 --- [spring-boot-kotlin-STT] [main] c.S.s.SpringBootKotlinSttApplicationKt   : Started SpringBootKotlinSttApplicationKt in 7.529 seconds (process running for 8.357)
+2026-06-01T17:12:48.060+03:00  INFO 46872 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-01T17:12:48.061+03:00  INFO 46872 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-01T17:12:48.061+03:00  INFO 46872 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-06-01T17:12:48.103+03:00 DEBUG 46872 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-1] c.S.s.controller.ThemesController        : GET /themes called with params: name=null, description=null, author=null
+2026-06-01T17:12:48.188+03:00 DEBUG 46872 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-1] c.S.s.service.ThemesService              : searching themes with filters - name: null, description: null, author: null
+2026-06-01T17:12:49.108+03:00 ERROR 46872 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-1] c.S.s.exception.GlobalExceptionHandler   : Internal server error
+
+java.lang.NullPointerException: Parameter specified as non-null is null: method com.StudentsToThemes.spring_boot_kotlin_STT.service.StudentMappersKt.toResponseDto, parameter <this>
+	at com.StudentsToThemes.spring_boot_kotlin_STT.service.StudentMappersKt.toResponseDto(StudentMappers.kt) ~[main/:na]
+	at com.StudentsToThemes.spring_boot_kotlin_STT.service.ThemeMappersKt.toResponseDto(ThemeMappers.kt:15) ~[main/:na]
+	at com.StudentsToThemes.spring_boot_kotlin_STT.service.ThemesService.getThemes(ThemesService.kt:58) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360) ~[spring-aop-6.2.12.jar:6.2.12]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.2.12.jar:6.2.12]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.2.12.jar:6.2.12]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380) ~[spring-tx-6.2.12.jar:6.2.12]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.2.12.jar:6.2.12]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.12.jar:6.2.12]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728) ~[spring-aop-6.2.12.jar:6.2.12]
+	at com.StudentsToThemes.spring_boot_kotlin_STT.service.ThemesService$$SpringCGLIB$$0.getThemes(<generated>) ~[main/:na]
+	at com.StudentsToThemes.spring_boot_kotlin_STT.controller.ThemesController.getThemes(ThemesController.kt:46) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at kotlin.reflect.jvm.internal.calls.CallerImpl$Method.callMethod(CallerImpl.kt:97) ~[kotlin-reflect-1.9.25.jar:1.9.25-release-852]
+	at kotlin.reflect.jvm.internal.calls.CallerImpl$Method$Instance.call(CallerImpl.kt:113) ~[kotlin-reflect-1.9.25.jar:1.9.25-release-852]
+	at kotlin.reflect.jvm.internal.KCallableImpl.callDefaultMethod$kotlin_reflection(KCallableImpl.kt:207) ~[kotlin-reflect-1.9.25.jar:1.9.25-release-852]
+	at kotlin.reflect.jvm.internal.KCallableImpl.callBy(KCallableImpl.kt:112) ~[kotlin-reflect-1.9.25.jar:1.9.25-release-852]
+	at org.springframework.web.method.support.InvocableHandlerMethod$KotlinDelegate.invokeFunction(InvocableHandlerMethod.java:335) ~[spring-web-6.2.12.jar:6.2.12]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.2.12.jar:6.2.12]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.48.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.48.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.12.jar:6.2.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.12.jar:6.2.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.12.jar:6.2.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.12.jar:6.2.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.12.jar:6.2.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.12.jar:6.2.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-06-01T17:14:03.531+03:00  INFO 46872 --- [spring-boot-kotlin-STT] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-01T17:14:03.535+03:00  INFO 46872 --- [spring-boot-kotlin-STT] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-06-01T17:14:03.538+03:00  INFO 46872 --- [spring-boot-kotlin-STT] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-01T17:14:03.539+03:00  INFO 46872 --- [spring-boot-kotlin-STT] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-01T17:14:03.544+03:00  INFO 46872 --- [spring-boot-kotlin-STT] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-01T17:14:07.583+03:00  INFO 49248 --- [spring-boot-kotlin-STT] [main] c.S.s.SpringBootKotlinSttApplicationKt   : Starting SpringBootKotlinSttApplicationKt v1.0.0-dev using Java 21.0.4 with PID 49248 (C:\Users\ПК-ДОМ\Desktop\3SEM\OOP\4-sem\students_to_themesXXX\spring-boot-kotlin-STT\build\classes\kotlin\main started by Netnol in C:\Users\ПК-ДОМ\Desktop\3SEM\OOP\4-sem\students_to_themesXXX\spring-boot-kotlin-STT)
+2026-06-01T17:14:07.584+03:00 DEBUG 49248 --- [spring-boot-kotlin-STT] [main] c.S.s.SpringBootKotlinSttApplicationKt   : Running with Spring Boot v3.5.7, Spring v6.2.12
+2026-06-01T17:14:07.584+03:00  INFO 49248 --- [spring-boot-kotlin-STT] [main] c.S.s.SpringBootKotlinSttApplicationKt   : The following 1 profile is active: "dev"
+2026-06-01T17:14:08.096+03:00  INFO 49248 --- [spring-boot-kotlin-STT] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-01T17:14:08.152+03:00  INFO 49248 --- [spring-boot-kotlin-STT] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 3 JPA repository interfaces.
+2026-06-01T17:14:08.455+03:00  INFO 49248 --- [spring-boot-kotlin-STT] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-06-01T17:14:08.467+03:00  INFO 49248 --- [spring-boot-kotlin-STT] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-01T17:14:08.467+03:00  INFO 49248 --- [spring-boot-kotlin-STT] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-06-01T17:14:08.512+03:00  INFO 49248 --- [spring-boot-kotlin-STT] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-01T17:14:08.512+03:00  INFO 49248 --- [spring-boot-kotlin-STT] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 891 ms
+2026-06-01T17:14:08.950+03:00  INFO 49248 --- [spring-boot-kotlin-STT] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-01T17:14:08.976+03:00  INFO 49248 --- [spring-boot-kotlin-STT] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-01T17:14:10.976+03:00  WARN 49248 --- [spring-boot-kotlin-STT] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 28P01
+2026-06-01T17:14:10.977+03:00 ERROR 49248 --- [spring-boot-kotlin-STT] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : FATAL: password authentication failed for user "postgres"
+2026-06-01T17:14:10.977+03:00  WARN 49248 --- [spring-boot-kotlin-STT] [main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+
+org.hibernate.exception.GenericJDBCException: unable to obtain isolated JDBC connection [FATAL: password authentication failed for user "postgres"] [n/a]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:63) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:334) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1442) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1513) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:973) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.7.jar:3.5.7]
+	at com.StudentsToThemes.spring_boot_kotlin_STT.SpringBootKotlinSttApplicationKt.main(SpringBootKotlinSttApplication.kt:13) ~[main/:na]
+Caused by: org.postgresql.util.PSQLException: FATAL: password authentication failed for user "postgres"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:778) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:234) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:289) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:57) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:279) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.Driver.makeConnection(Driver.java:448) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.Driver.connect(Driver.java:298) ~[postgresql-42.7.8.jar:42.7.8]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:370) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:207) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-6.3.3.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:485) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	... 35 common frames omitted
+
+2026-06-01T17:14:10.980+03:00 ERROR 49248 --- [spring-boot-kotlin-STT] [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2026-06-01T17:14:10.980+03:00  WARN 49248 --- [spring-boot-kotlin-STT] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2026-06-01T17:14:10.983+03:00  INFO 49248 --- [spring-boot-kotlin-STT] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-06-01T17:14:10.991+03:00  INFO 49248 --- [spring-boot-kotlin-STT] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-01T17:14:11.005+03:00 ERROR 49248 --- [spring-boot-kotlin-STT] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1826) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:973) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.7.jar:3.5.7]
+	at com.StudentsToThemes.spring_boot_kotlin_STT.SpringBootKotlinSttApplicationKt.main(SpringBootKotlinSttApplication.kt:13) ~[main/:na]
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:276) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1442) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1513) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.12.jar:6.2.12]
+	... 15 common frames omitted
+Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:191) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:87) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentWithDefaults(JdbcEnvironmentInitiator.java:186) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:410) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	... 30 common frames omitted
+
+2026-06-01T17:15:14.577+03:00  INFO 36944 --- [spring-boot-kotlin-STT] [main] c.S.s.SpringBootKotlinSttApplicationKt   : Starting SpringBootKotlinSttApplicationKt v1.0.0-dev using Java 21.0.4 with PID 36944 (C:\Users\ПК-ДОМ\Desktop\3SEM\OOP\4-sem\students_to_themesXXX\spring-boot-kotlin-STT\build\classes\kotlin\main started by Netnol in C:\Users\ПК-ДОМ\Desktop\3SEM\OOP\4-sem\students_to_themesXXX\spring-boot-kotlin-STT)
+2026-06-01T17:15:14.578+03:00 DEBUG 36944 --- [spring-boot-kotlin-STT] [main] c.S.s.SpringBootKotlinSttApplicationKt   : Running with Spring Boot v3.5.7, Spring v6.2.12
+2026-06-01T17:15:14.578+03:00  INFO 36944 --- [spring-boot-kotlin-STT] [main] c.S.s.SpringBootKotlinSttApplicationKt   : The following 1 profile is active: "dev"
+2026-06-01T17:15:15.091+03:00  INFO 36944 --- [spring-boot-kotlin-STT] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-01T17:15:15.149+03:00  INFO 36944 --- [spring-boot-kotlin-STT] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 3 JPA repository interfaces.
+2026-06-01T17:15:15.465+03:00  INFO 36944 --- [spring-boot-kotlin-STT] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-06-01T17:15:15.475+03:00  INFO 36944 --- [spring-boot-kotlin-STT] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-01T17:15:15.476+03:00  INFO 36944 --- [spring-boot-kotlin-STT] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-06-01T17:15:15.520+03:00  INFO 36944 --- [spring-boot-kotlin-STT] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-01T17:15:15.520+03:00  INFO 36944 --- [spring-boot-kotlin-STT] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 907 ms
+2026-06-01T17:15:15.973+03:00  INFO 36944 --- [spring-boot-kotlin-STT] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-01T17:15:16.007+03:00  INFO 36944 --- [spring-boot-kotlin-STT] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-01T17:15:17.276+03:00  INFO 36944 --- [spring-boot-kotlin-STT] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1328f482
+2026-06-01T17:15:17.277+03:00  INFO 36944 --- [spring-boot-kotlin-STT] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-01T17:15:19.724+03:00  INFO 36944 --- [spring-boot-kotlin-STT] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-01T17:15:20.124+03:00  INFO 36944 --- [spring-boot-kotlin-STT] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-01T17:15:20.814+03:00  WARN 36944 --- [spring-boot-kotlin-STT] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-01T17:15:21.083+03:00  INFO 36944 --- [spring-boot-kotlin-STT] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-06-01T17:15:21.088+03:00  INFO 36944 --- [spring-boot-kotlin-STT] [main] c.S.s.SpringBootKotlinSttApplicationKt   : Started SpringBootKotlinSttApplicationKt in 6.893 seconds (process running for 7.333)
+2026-06-01T17:15:24.847+03:00  INFO 36944 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-01T17:15:24.847+03:00  INFO 36944 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-01T17:15:24.848+03:00  INFO 36944 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-06-01T17:15:24.889+03:00 DEBUG 36944 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-3] c.S.s.controller.ThemesController        : GET /themes called with params: name=null, description=null, author=null
+2026-06-01T17:15:24.936+03:00 DEBUG 36944 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-3] c.S.s.service.ThemesService              : searching themes with filters - name: null, description: null, author: null
+2026-06-01T17:15:31.738+03:00  INFO 36944 --- [spring-boot-kotlin-STT] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-01T17:15:31.743+03:00  INFO 36944 --- [spring-boot-kotlin-STT] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-06-01T17:15:31.746+03:00  INFO 36944 --- [spring-boot-kotlin-STT] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-01T17:15:31.747+03:00  INFO 36944 --- [spring-boot-kotlin-STT] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-01T17:15:32.009+03:00  INFO 36944 --- [spring-boot-kotlin-STT] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-01T17:19:28.844+03:00  INFO 12212 --- [spring-boot-kotlin-STT] [main] c.S.s.SpringBootKotlinSttApplicationKt   : Starting SpringBootKotlinSttApplicationKt v1.0.0-dev using Java 21.0.4 with PID 12212 (C:\Users\ПК-ДОМ\Desktop\3SEM\OOP\4-sem\students_to_themesXXX\spring-boot-kotlin-STT\build\classes\kotlin\main started by Netnol in C:\Users\ПК-ДОМ\Desktop\3SEM\OOP\4-sem\students_to_themesXXX\spring-boot-kotlin-STT)
+2026-06-01T17:19:28.845+03:00 DEBUG 12212 --- [spring-boot-kotlin-STT] [main] c.S.s.SpringBootKotlinSttApplicationKt   : Running with Spring Boot v3.5.7, Spring v6.2.12
+2026-06-01T17:19:28.845+03:00  INFO 12212 --- [spring-boot-kotlin-STT] [main] c.S.s.SpringBootKotlinSttApplicationKt   : The following 1 profile is active: "dev"
+2026-06-01T17:19:29.351+03:00  INFO 12212 --- [spring-boot-kotlin-STT] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-01T17:19:29.407+03:00  INFO 12212 --- [spring-boot-kotlin-STT] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 3 JPA repository interfaces.
+2026-06-01T17:19:29.736+03:00  INFO 12212 --- [spring-boot-kotlin-STT] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-06-01T17:19:29.747+03:00  INFO 12212 --- [spring-boot-kotlin-STT] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-01T17:19:29.747+03:00  INFO 12212 --- [spring-boot-kotlin-STT] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-06-01T17:19:29.793+03:00  INFO 12212 --- [spring-boot-kotlin-STT] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-01T17:19:29.793+03:00  INFO 12212 --- [spring-boot-kotlin-STT] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 913 ms
+2026-06-01T17:19:30.241+03:00  INFO 12212 --- [spring-boot-kotlin-STT] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-01T17:19:30.268+03:00  INFO 12212 --- [spring-boot-kotlin-STT] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-01T17:19:30.273+03:00  WARN 12212 --- [spring-boot-kotlin-STT] [main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+
+java.lang.RuntimeException: Driver org.postgresql.Driver claims to not accept jdbcUrl, postgresql://localhost:5433/stt_db
+	at com.zaxxer.hikari.util.DriverDataSource.<init>(DriverDataSource.java:116) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.initializeDataSource(PoolBase.java:333) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.<init>(PoolBase.java:118) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:90) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-6.3.3.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:485) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:334) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1442) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1513) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:973) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.7.jar:3.5.7]
+	at com.StudentsToThemes.spring_boot_kotlin_STT.SpringBootKotlinSttApplicationKt.main(SpringBootKotlinSttApplication.kt:13) ~[main/:na]
+
+2026-06-01T17:19:30.276+03:00 ERROR 12212 --- [spring-boot-kotlin-STT] [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2026-06-01T17:19:30.276+03:00  WARN 12212 --- [spring-boot-kotlin-STT] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2026-06-01T17:19:30.278+03:00  INFO 12212 --- [spring-boot-kotlin-STT] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-06-01T17:19:30.285+03:00  INFO 12212 --- [spring-boot-kotlin-STT] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-01T17:19:30.299+03:00 ERROR 12212 --- [spring-boot-kotlin-STT] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1826) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:973) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.7.jar:3.5.7]
+	at com.StudentsToThemes.spring_boot_kotlin_STT.SpringBootKotlinSttApplicationKt.main(SpringBootKotlinSttApplication.kt:13) ~[main/:na]
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:276) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1442) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1513) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.12.jar:6.2.12]
+	... 15 common frames omitted
+Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:191) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:87) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentWithDefaults(JdbcEnvironmentInitiator.java:186) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:410) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	... 30 common frames omitted
+
+2026-06-01T17:19:44.255+03:00  INFO 11912 --- [spring-boot-kotlin-STT] [main] c.S.s.SpringBootKotlinSttApplicationKt   : Starting SpringBootKotlinSttApplicationKt v1.0.0-dev using Java 21.0.4 with PID 11912 (C:\Users\ПК-ДОМ\Desktop\3SEM\OOP\4-sem\students_to_themesXXX\spring-boot-kotlin-STT\build\classes\kotlin\main started by Netnol in C:\Users\ПК-ДОМ\Desktop\3SEM\OOP\4-sem\students_to_themesXXX\spring-boot-kotlin-STT)
+2026-06-01T17:19:44.257+03:00 DEBUG 11912 --- [spring-boot-kotlin-STT] [main] c.S.s.SpringBootKotlinSttApplicationKt   : Running with Spring Boot v3.5.7, Spring v6.2.12
+2026-06-01T17:19:44.257+03:00  INFO 11912 --- [spring-boot-kotlin-STT] [main] c.S.s.SpringBootKotlinSttApplicationKt   : The following 1 profile is active: "dev"
+2026-06-01T17:19:44.774+03:00  INFO 11912 --- [spring-boot-kotlin-STT] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-01T17:19:44.828+03:00  INFO 11912 --- [spring-boot-kotlin-STT] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 3 JPA repository interfaces.
+2026-06-01T17:19:45.136+03:00  INFO 11912 --- [spring-boot-kotlin-STT] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-06-01T17:19:45.152+03:00  INFO 11912 --- [spring-boot-kotlin-STT] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-01T17:19:45.152+03:00  INFO 11912 --- [spring-boot-kotlin-STT] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-06-01T17:19:45.210+03:00  INFO 11912 --- [spring-boot-kotlin-STT] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-01T17:19:45.211+03:00  INFO 11912 --- [spring-boot-kotlin-STT] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 916 ms
+2026-06-01T17:19:45.644+03:00  INFO 11912 --- [spring-boot-kotlin-STT] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-01T17:19:45.670+03:00  INFO 11912 --- [spring-boot-kotlin-STT] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-01T17:19:45.676+03:00  WARN 11912 --- [spring-boot-kotlin-STT] [main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+
+java.lang.RuntimeException: Driver org.postgresql.Driver claims to not accept jdbcUrl, postgresql://localhost:5433/stt_db
+	at com.zaxxer.hikari.util.DriverDataSource.<init>(DriverDataSource.java:116) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.initializeDataSource(PoolBase.java:333) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.<init>(PoolBase.java:118) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:90) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-6.3.3.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:485) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:334) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1442) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1513) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:973) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.7.jar:3.5.7]
+	at com.StudentsToThemes.spring_boot_kotlin_STT.SpringBootKotlinSttApplicationKt.main(SpringBootKotlinSttApplication.kt:13) ~[main/:na]
+
+2026-06-01T17:19:45.679+03:00 ERROR 11912 --- [spring-boot-kotlin-STT] [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2026-06-01T17:19:45.679+03:00  WARN 11912 --- [spring-boot-kotlin-STT] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2026-06-01T17:19:45.681+03:00  INFO 11912 --- [spring-boot-kotlin-STT] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-06-01T17:19:45.688+03:00  INFO 11912 --- [spring-boot-kotlin-STT] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-01T17:19:45.702+03:00 ERROR 11912 --- [spring-boot-kotlin-STT] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1826) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:973) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.7.jar:3.5.7]
+	at com.StudentsToThemes.spring_boot_kotlin_STT.SpringBootKotlinSttApplicationKt.main(SpringBootKotlinSttApplication.kt:13) ~[main/:na]
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:276) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1442) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1513) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.12.jar:6.2.12]
+	... 15 common frames omitted
+Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:191) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:87) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentWithDefaults(JdbcEnvironmentInitiator.java:186) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:410) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.6.33.Final.jar:6.6.33.Final]
+	... 30 common frames omitted
+
+2026-06-01T17:20:14.481+03:00  INFO 49068 --- [spring-boot-kotlin-STT] [main] c.S.s.SpringBootKotlinSttApplicationKt   : Starting SpringBootKotlinSttApplicationKt v1.0.0-dev using Java 21.0.4 with PID 49068 (C:\Users\ПК-ДОМ\Desktop\3SEM\OOP\4-sem\students_to_themesXXX\spring-boot-kotlin-STT\build\classes\kotlin\main started by Netnol in C:\Users\ПК-ДОМ\Desktop\3SEM\OOP\4-sem\students_to_themesXXX\spring-boot-kotlin-STT)
+2026-06-01T17:20:14.482+03:00 DEBUG 49068 --- [spring-boot-kotlin-STT] [main] c.S.s.SpringBootKotlinSttApplicationKt   : Running with Spring Boot v3.5.7, Spring v6.2.12
+2026-06-01T17:20:14.482+03:00  INFO 49068 --- [spring-boot-kotlin-STT] [main] c.S.s.SpringBootKotlinSttApplicationKt   : The following 1 profile is active: "dev"
+2026-06-01T17:20:14.993+03:00  INFO 49068 --- [spring-boot-kotlin-STT] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-01T17:20:15.048+03:00  INFO 49068 --- [spring-boot-kotlin-STT] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 3 JPA repository interfaces.
+2026-06-01T17:20:15.380+03:00  INFO 49068 --- [spring-boot-kotlin-STT] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-06-01T17:20:15.392+03:00  INFO 49068 --- [spring-boot-kotlin-STT] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-01T17:20:15.392+03:00  INFO 49068 --- [spring-boot-kotlin-STT] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-06-01T17:20:15.450+03:00  INFO 49068 --- [spring-boot-kotlin-STT] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-01T17:20:15.451+03:00  INFO 49068 --- [spring-boot-kotlin-STT] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 932 ms
+2026-06-01T17:20:15.896+03:00  INFO 49068 --- [spring-boot-kotlin-STT] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-01T17:20:15.925+03:00  INFO 49068 --- [spring-boot-kotlin-STT] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-01T17:20:16.036+03:00  INFO 49068 --- [spring-boot-kotlin-STT] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3c9e19de
+2026-06-01T17:20:16.037+03:00  INFO 49068 --- [spring-boot-kotlin-STT] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-01T17:20:17.024+03:00  INFO 49068 --- [spring-boot-kotlin-STT] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-01T17:20:17.431+03:00  INFO 49068 --- [spring-boot-kotlin-STT] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-01T17:20:18.126+03:00  WARN 49068 --- [spring-boot-kotlin-STT] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-01T17:20:18.400+03:00  INFO 49068 --- [spring-boot-kotlin-STT] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-06-01T17:20:18.405+03:00  INFO 49068 --- [spring-boot-kotlin-STT] [main] c.S.s.SpringBootKotlinSttApplicationKt   : Started SpringBootKotlinSttApplicationKt in 4.301 seconds (process running for 4.748)
+2026-06-01T17:20:21.020+03:00  INFO 49068 --- [spring-boot-kotlin-STT] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-01T17:20:21.024+03:00  INFO 49068 --- [spring-boot-kotlin-STT] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-06-01T17:20:21.027+03:00  INFO 49068 --- [spring-boot-kotlin-STT] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-01T17:20:21.028+03:00  INFO 49068 --- [spring-boot-kotlin-STT] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-01T17:20:21.031+03:00  INFO 49068 --- [spring-boot-kotlin-STT] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-01T17:57:03.437+03:00  INFO 41816 --- [spring-boot-kotlin-STT] [main] c.S.s.SpringBootKotlinSttApplicationKt   : Starting SpringBootKotlinSttApplicationKt v1.0.0-dev using Java 21.0.4 with PID 41816 (C:\Users\ПК-ДОМ\Desktop\3SEM\OOP\4-sem\students_to_themesXXX\spring-boot-kotlin-STT\build\classes\kotlin\main started by Netnol in C:\Users\ПК-ДОМ\Desktop\3SEM\OOP\4-sem\students_to_themesXXX\spring-boot-kotlin-STT)
+2026-06-01T17:57:03.438+03:00 DEBUG 41816 --- [spring-boot-kotlin-STT] [main] c.S.s.SpringBootKotlinSttApplicationKt   : Running with Spring Boot v3.5.7, Spring v6.2.12
+2026-06-01T17:57:03.438+03:00  INFO 41816 --- [spring-boot-kotlin-STT] [main] c.S.s.SpringBootKotlinSttApplicationKt   : The following 1 profile is active: "dev"
+2026-06-01T17:57:03.959+03:00  INFO 41816 --- [spring-boot-kotlin-STT] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-01T17:57:04.014+03:00  INFO 41816 --- [spring-boot-kotlin-STT] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 3 JPA repository interfaces.
+2026-06-01T17:57:04.337+03:00  INFO 41816 --- [spring-boot-kotlin-STT] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-06-01T17:57:04.348+03:00  INFO 41816 --- [spring-boot-kotlin-STT] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-01T17:57:04.348+03:00  INFO 41816 --- [spring-boot-kotlin-STT] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-06-01T17:57:04.397+03:00  INFO 41816 --- [spring-boot-kotlin-STT] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-01T17:57:04.398+03:00  INFO 41816 --- [spring-boot-kotlin-STT] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 921 ms
+2026-06-01T17:57:04.847+03:00  INFO 41816 --- [spring-boot-kotlin-STT] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-01T17:57:04.881+03:00  INFO 41816 --- [spring-boot-kotlin-STT] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-01T17:57:06.031+03:00  INFO 41816 --- [spring-boot-kotlin-STT] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@351d93bd
+2026-06-01T17:57:06.033+03:00  INFO 41816 --- [spring-boot-kotlin-STT] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-01T17:57:08.340+03:00  INFO 41816 --- [spring-boot-kotlin-STT] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-01T17:57:08.781+03:00  INFO 41816 --- [spring-boot-kotlin-STT] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-01T17:57:09.450+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-01T17:57:09.747+03:00  INFO 41816 --- [spring-boot-kotlin-STT] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-06-01T17:57:09.753+03:00  INFO 41816 --- [spring-boot-kotlin-STT] [main] c.S.s.SpringBootKotlinSttApplicationKt   : Started SpringBootKotlinSttApplicationKt in 6.692 seconds (process running for 7.176)
+2026-06-01T17:58:44.571+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@351d93bd (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T17:58:45.531+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@42a668d8 (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T17:58:47.156+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@28f2d93d (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T17:58:51.791+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@b00d1cc (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T17:58:54.147+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@664b87be (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T17:58:54.897+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@175ad307 (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T17:58:58.434+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@29dfdbe0 (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T17:59:00.126+03:00  INFO 41816 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-01T17:59:00.126+03:00  INFO 41816 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-01T17:59:00.127+03:00  INFO 41816 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-06-01T17:59:00.168+03:00 DEBUG 41816 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-2] c.S.s.controller.ThemesController        : POST /themes/09d698c7-1f31-403c-9d44-1bcab49dd0bc/ml-sort-all
+2026-06-01T17:59:00.172+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@3b36e0f (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T17:59:00.173+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@1f2859cf (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T17:59:00.173+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@59e6335e (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T17:59:00.240+03:00  INFO 41816 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-2] c.S.s.service.ThemesService              : ML sorting all specializations in theme: 09d698c7-1f31-403c-9d44-1bcab49dd0bc
+2026-06-01T17:59:00.578+03:00  INFO 41816 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-2] c.S.s.service.MLSortingService           : ML sorting for specialization: Data Science in theme: 09d698c7-1f31-403c-9d44-1bcab49dd0bc
+2026-06-01T17:59:01.045+03:00  INFO 41816 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-2] c.S.s.service.ThemesService              : Successfully ML sorted specialization: Data Science
+2026-06-01T17:59:01.090+03:00  INFO 41816 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-2] c.S.s.service.MLSortingService           : ML sorting for specialization: Computer Vision in theme: 09d698c7-1f31-403c-9d44-1bcab49dd0bc
+2026-06-01T17:59:01.127+03:00  INFO 41816 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-2] c.S.s.service.ThemesService              : Successfully ML sorted specialization: Computer Vision
+2026-06-01T17:59:01.167+03:00  INFO 41816 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-2] c.S.s.service.MLSortingService           : ML sorting for specialization: NLP in theme: 09d698c7-1f31-403c-9d44-1bcab49dd0bc
+2026-06-01T17:59:01.200+03:00  INFO 41816 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-2] c.S.s.service.ThemesService              : Successfully ML sorted specialization: NLP
+2026-06-01T17:59:01.257+03:00  INFO 41816 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-2] c.S.s.service.MLSortingService           : ML sorting for specialization: Machine Learning in theme: 09d698c7-1f31-403c-9d44-1bcab49dd0bc
+2026-06-01T17:59:01.301+03:00  INFO 41816 --- [spring-boot-kotlin-STT] [http-nio-8080-exec-2] c.S.s.service.ThemesService              : Successfully ML sorted specialization: Machine Learning
+2026-06-01T18:00:27.555+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@245cf1a6 (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T18:00:30.025+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@5f93ceda (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T18:00:36.630+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@8c40e13 (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T18:00:40.637+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@52786526 (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T18:00:42.967+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@13dc94ad (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T18:00:44.852+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@3bc0b453 (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T18:00:47.943+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@4096e128 (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T18:00:55.243+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@5156fd49 (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T18:00:57.671+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@18042896 (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T18:01:01.453+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@6fec151f (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T18:02:12.577+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@9b6111e (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T18:02:17.837+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@55e36e65 (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T18:02:18.682+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@63af1981 (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T18:02:26.081+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@5a53ab67 (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T18:02:27.494+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@8d0a021 (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T18:02:41.055+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@1328c3ab (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T18:02:43.398+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@2b257bae (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T18:02:46.079+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@26f90743 (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T18:02:47.242+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@7399adac (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T18:03:00.916+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@1d419f6f (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T18:04:07.450+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@7394b089 (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T18:04:08.037+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@5c75c3a9 (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T18:04:14.994+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@a61753a (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T18:04:17.298+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@65fcb25e (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T18:04:17.809+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@17665dc3 (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T18:04:24.131+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@162f22b0 (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T18:04:30.518+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@7666e10b (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T18:04:34.950+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@3c1ea03a (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T18:04:38.503+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@cb8429c (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T18:04:51.469+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@4d9794b9 (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T18:05:49.484+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@e1299c2 (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T18:05:56.815+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@31b3e0d5 (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T18:06:02.316+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@4ba2700a (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T18:06:02.869+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@21bca24f (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T18:06:07.898+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@51d3ee52 (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T18:06:11.719+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@3c4a4fbf (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T18:06:14.125+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@78a03ca3 (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T18:06:16.073+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@364fec9b (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T18:06:25.532+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@709217f6 (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T18:06:44.639+03:00  WARN 41816 --- [spring-boot-kotlin-STT] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@67f7fbb2 (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+2026-06-01T18:07:31.982+03:00  INFO 41816 --- [spring-boot-kotlin-STT] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-01T18:07:31.986+03:00  INFO 41816 --- [spring-boot-kotlin-STT] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-06-01T18:07:31.989+03:00  INFO 41816 --- [spring-boot-kotlin-STT] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-01T18:07:31.990+03:00  INFO 41816 --- [spring-boot-kotlin-STT] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-01T18:07:32.003+03:00  INFO 41816 --- [spring-boot-kotlin-STT] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

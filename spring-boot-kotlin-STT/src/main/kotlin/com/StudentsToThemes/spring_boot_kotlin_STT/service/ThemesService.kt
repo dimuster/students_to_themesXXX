@@ -392,7 +392,7 @@ class ThemesService(
             .orElseThrow { StudentNotFoundException(studentId) }
 
         return student.themes.map { theme ->
-            val priority = theme.priorityStudents.indexOfFirst { it?.id == studentId }
+            val priority = theme.priorityStudents.indexOfFirst { it.id == studentId }
             ThemeWithPriorityDto(
                 themeId = theme.id!!,
                 themeName = theme.name,

@@ -16,7 +16,6 @@ import java.util.UUID
 class StudentsService(
     private val studentsRepository: StudentsRepository
 ) {
-    // Создаем логгер для этого класса
     private val log = LoggerFactory.getLogger(StudentsService::class.java)
 
     /**
